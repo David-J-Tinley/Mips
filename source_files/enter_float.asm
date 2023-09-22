@@ -10,11 +10,11 @@
 	user_input: .float 0.0
 	
 .text
-	li $v0, 4	   # 4 is syscall for 'print string'
+	li $v0, 4	       # 4 is syscall for 'print string'
 	la $a0, prompt
 	syscall
 	
-	li $v0, 6	   # 6 is syscall for 'read float'
+	li $v0, 6	       # 6 is syscall for 'read float'
 	la $a0, user_input # result is stored in co-processor-1 $f0
 	syscall
 
